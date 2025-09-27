@@ -1,11 +1,19 @@
-import { useState } from 'react'
+import React from "react"
+import { Route, Routes } from "react-router-dom"
+import Game from "./Pages/Game"
+import Leaderboard from "./Pages/Leaderboard"
+import IRLQuests from "./Pages/IRLQuests"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className='bg-amber-800'>Hello World</h1>
+      <Routes>
+        <Route path="/" element = {<Home />} />
+        <Route path="/game" element = {<Game /> } />
+        <Route path="/leaderboard" element = {<Leaderboard />} />
+        <Route path="/IRLQuests" element = {<IRLQuests />} />
+      </Routes>
     </>
   )
 }
